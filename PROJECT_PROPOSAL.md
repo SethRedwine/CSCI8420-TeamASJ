@@ -3,7 +3,9 @@
 
 ### Project Motivation
 ---
+Our first criteria was to select a project in common languages we all know or am able to pick up quickly. A common, well-established language will also have the security tool support to complete the project. Python meets both of these criteria. 
 
+Once we decided on Python, we began to look at projects on GitHub. Mailpile stood out as it seemed to inherently have a lot of interesting security features. On top of the typical security requirements required with email (i.e. user authentication, [FILL OUT]), Mailpile does some neat stuff with encryption and storing email locally on a user’s computer. 
 
 ### Mailpile 
 ---
@@ -24,19 +26,18 @@ But the project has received contributions from more than 140 contributors to da
 
 **Links**
 
-* [Website](https://www.mailpile.is/)
-
-* [Repository](https://github.com/mailpile/Mailpile)
-
-* [Wiki](https://github.com/mailpile/Mailpile/wiki)
+[Website](https://www.mailpile.is/)
+[Repository](https://github.com/mailpile/Mailpile)
+[Wiki](https://github.com/mailpile/Mailpile/wiki)
 
 
 ### Security Requirements
 ---
-
+Users of Mailpile are very interested in security. As this is an email client, so it can be used at home or work for users. The most prominent feature is the encryption of email to a users local computer. Mailpile has no email servers of its own. Instead, it uses existing email addresses. Mailpile goes to the email servers to download the messages, then deletes the email the remote copy on the server while encrypting and storing the messages locally. Encryption keys are never sent anywhere. Deleting mail from the server isn’t perfect as it is unpredictable when a server will truly purge itself ot deleted data. But for common attackers that have gained access to an email account, they won’t find much since the messages have been deleted. 
 
 ### Security Features
 ---
+* Encryption - 
 
 
 ### Security History
