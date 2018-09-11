@@ -45,6 +45,13 @@ Users of Mailpile are very interested in security. As this is an email client, s
 
 * Private Key Security - Mailpile does not store the users private keys on any type of mail server. Because Mailpile does not provide mail servers, it does not store any private keys. This allows users to have complete control over their private keys.
 
+* Password Login Problem - Utilizing the Mailpile software, people could use their password to login their account. Although they do not need to remember their usernames, they might meet security problems. When other people know the password, they can log into the account to check the email contents. Combining password and username will be a better choice to improve security features.
+
+* Email Copying Security Problem : Logging into the account of Mailpile, the program will sync most of the emails. People cannot choose the sync email time period. If other people have the access to the email, all of the contents will be shown.
+
+* Desktop Version Security Problem: Desktop version software is not that secure that online version, since most people's laptops do not have high security level. Hackers can hack individuals' computer fast and easily. Online version software can be controlled by the software developers and it can be updated conveniently if there are some security problems.
+
+
 ### Security History
 ---
 
