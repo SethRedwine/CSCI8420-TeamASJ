@@ -5,11 +5,10 @@
 ---
 Our first criteria was to select a project in common languages we all know or am able to pick up quickly. A common, well-established language will also have the security tool support to complete the project. Python meets both of these criteria.
 
-Once we decided on Python, we began to look at projects on GitHub. Mailpile stood out as it seemed to inherently have a lot of interesting security features. On top of the typical security requirements required with email (i.e. user authentication, [FILL OUT]), Mailpile does some neat stuff with encryption and storing email locally on a user’s computer.
+Once we decided on Python, we began to look at projects on GitHub. Mailpile stood out as it seemed to inherently have a lot of interesting security features. On top of the typical security requirements required with email (i.e. user authentication, message privacy and integrity), Mailpile does some neat stuff with encryption and storing email locally on a user’s computer.
 
 ### Mailpile
 ---
-
 **Description**
 
 [Mailpile](https://www.mailpile.is/) is an email client built with a focus on security, making it easy for users to send and receive signed or PGP encrypted email.
@@ -30,7 +29,6 @@ But the project has received contributions from more than 140 contributors to da
 [Repository](https://github.com/mailpile/Mailpile)
 [Wiki](https://github.com/mailpile/Mailpile/wiki)
 
-
 ### Security Requirements
 ---
 Users of Mailpile are very interested in security. As this is an email client, so it can be used at home or work for users. The most prominent feature is the encryption of email to a users local computer. Mailpile has no email servers of its own. Instead, it uses existing email addresses. Mailpile goes to the email servers to download the messages, then deletes the email the remote copy on the server while encrypting and storing the messages locally. Encryption keys are never sent anywhere. Deleting mail from the server isn’t perfect as it is unpredictable when a server will truly purge itself ot deleted data. But for common attackers that have gained access to an email account, they won’t find much since the messages have been deleted.
@@ -45,29 +43,23 @@ Users of Mailpile are very interested in security. As this is an email client, s
 
 * Private Key Security - Mailpile does not store the users private keys on any type of mail server. Because Mailpile does not provide mail servers, it does not store any private keys. This allows users to have complete control over their private keys.
 
-* Password Login Problem - Utilizing the Mailpile software, people could use their password to login their account. Although they do not need to remember their usernames, they might meet security problems. When other people know the password, they can log into the account to check the email contents. Combining password and username will be a better choice to improve security features.
-
-* Email Copying Security Problem : Logging into the account of Mailpile, the program will sync most of the emails. People cannot choose the sync email time period. If other people have the access to the email, all of the contents will be shown.
-
-* Desktop Version Security Problem: Desktop version software is not that secure that online version, since most people's laptops do not have high security level. Hackers can hack individuals' computer fast and easily. Online version software can be controlled by the software developers and it can be updated conveniently if there are some security problems.
-
-
 ### Security History
 ---
+Mailpile has a well-documented security history and roadmap. For the long-term security goals of Mailpile, the developers want to make it as safe as possible, while also being easy and convenient to use and organize. Also, users of Mailpile should be able to communicate privately. This means that email messages are delivered intact and have not been eavesdropped on. Also, the email messages must be authentic and not forged in any way. Users should also be able to have confidence that they can store their emails long-term without worrying that their privacy will be compromised. Some security problems that were identified include:
+
+* Password Login Problem - Utilizing the Mailpile software, people could use their password to login to their account. Although they do not need to remember their usernames, they might meet security problems. When other people know the password, they can log into the account to check the email contents. Combining password and username will be a better choice to improve security features.
+
+* Email Copying Security Problem : Logging into the account of Mailpile, the program will sync most of the emails. People cannot choose the sync email time period. If other people have the access to the email, all of the contents will be shown.
 
 [Security Roadmap](https://github.com/mailpile/Mailpile/wiki/Security-roadmap)
 [Documented Issues](https://github.com/mailpile/Mailpile/issues?utf8=✓&q=label%3A%22Privacy+%2F+Security%22+)
 
-
 ### Licensing and Contributions
 ---
-
 The Mailpile client is licensed under the GNU Affero General Public License (AGPLv3), which can be read about [here](http://www.gnu.org/licenses/agpl-3.0.html). This is a copyleft license that requires people to disclose any modifications made to the source code under this license but not any other part of their own code.
 
 To contribute to Mailpile, the process seems fairly straightforward. One can find the Mailpile team’s guidelines [here](https://github.com/mailpile/Mailpile/blob/master/CONTRIBUTING.md). After checking the [FAQ](https://github.com/mailpile/Mailpile/blob/master/DEV_FAQ.md) and ensuring that the problem is indeed an issue, one can open a new issue documenting the problem, if it hasn’t already been documented. Then, submit a pull request with a description clearly describing both the problem and its solution. All contributions to the project are made under the same AGPLv3 license, but there is a tag of the code that is dual-licensed under both the AGPLv3 and the Apache License 2.0 that can be forked and developed independently.
 
-
 ### Team Repository
 ---
-
 [Github](https://github.com/SethRedwine/CSCI8420-TeamASJY/)
