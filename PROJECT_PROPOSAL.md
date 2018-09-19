@@ -3,7 +3,7 @@
 
 ### Project Motivation
 ---
-Our first criteria was to select a project in common languages we all know or am able to pick up quickly. A common, well-established language will also have the security tool support to complete the project. Python meets both of these criteria.
+Our first criteria was to select a project in common languages we all know or are able to pick up quickly. A common, well-established language will also have the security tool support to complete the project. Python meets both of these criteria.
 
 Once we decided on Python, we began to look at projects on GitHub. Mailpile stood out as it seemed to inherently have a lot of interesting security features. On top of the typical security requirements required with email (i.e. user authentication, message privacy and integrity), Mailpile encrypts and stores email locally on a user’s computer. 
 
