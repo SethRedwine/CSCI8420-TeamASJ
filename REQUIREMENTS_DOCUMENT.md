@@ -7,7 +7,7 @@ There are several important data flows to and from the Mailpile email client, ou
 
 ![Use Case Diagram](https://i.imgur.com/oe9yyB9.png)
 
-### Security Requirements and Misues Cases
+### Security Requirements and Misuse Cases
 
 ### Alignment of Security Requirements
 
