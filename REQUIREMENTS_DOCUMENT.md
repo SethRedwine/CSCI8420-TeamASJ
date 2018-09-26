@@ -3,6 +3,10 @@
 
 ### Data Flows and Use Cases
 
+There are several important data flows to and from the Mailpile email client, our system of interest. For the purpose of our analysis, we will focus in on a particular set of potential users for Mailpile, journalists and their sources. These users would like to send and recieve confidential emails from the client on their own personal computers, they would also like to store these emails locally, not remotely, and finally they would like to be able to delete files securely. Accomplishing these tasks requires data to flow between the client and the user, the client and local storage devices, and the client and the users' remote email servers. The uses cases for both the journalists and the sources can be seen in the diagram below.
+
+![Use Case Diagram](https://i.imgur.com/wUkogeS.png)
+
 ### Security Requirements and Misues Cases
 
 ### Alignment of Security Requirements
