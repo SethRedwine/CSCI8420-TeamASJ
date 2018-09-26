@@ -17,6 +17,10 @@ Other security requirements that were identified include preventing malicious us
 
 One weakness that was identified with the project is that Mailpile is currently interoperating with existing security standards. This can be considered a weakness because the current standards may be lacking in some ways regarding security requirements. As mentioned earlier Mailpile uses OpenPGP encryption. This standard does not encrypt email message headers, so the message subject, sender, and recipients remain unencrypted. The developers are actively trying to improve these features and incorporate better security measures so that the security requirements are better aligned with the features that the users of Mailpile need.
 
+[Mis Use Case Diagram - External Communication]
+
+[Mis Use Case Diagram - Local Machine]
+
 ### Security-Related Configuration Issues
 One of Mailpile's main features is that it is not an email service, but an email client. It doesn't run it's own email servers. Mailpile is used in conjuction with other email servers in order to provide a more secure way to get your email. When downloading Mailpile, you have to connect the client to your existing email accounts such as Gmail or Yahoo. Since users have to login to an external service using Mailpile, this connection and any credentials used to sign in would have to be encrypted to prevent unauthorized access. Mailpile provides built-in PGP encryption to handle this. According to the developers, at some point in the future, they want to offer an improved set of tools and integrations that make the email server component easier to integrate with. However, they have to make sure they do this correctly so they do not compromise security or ethics in the process. The developers also state that you may want to set up your own mail server using other open source projects such as Mail In A Box or iRedMail. 
 
