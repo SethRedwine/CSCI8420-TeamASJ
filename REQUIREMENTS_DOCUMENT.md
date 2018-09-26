@@ -16,7 +16,7 @@ For our analysis of security requirements for Mailpile, it was useful to split o
 
 
 
-The security requirements for use cases pertaining just to the local machine also follow a familiar pattern. 
+The security requirements for use cases pertaining just to the local machine also follow a familiar pattern.
 
 
 
@@ -28,11 +28,11 @@ Other security requirements that were identified include preventing malicious us
 
 One weakness that was identified with the project is that Mailpile is currently interoperating with existing security standards. This can be considered a weakness because the current standards may be lacking in some ways regarding security requirements. As mentioned earlier Mailpile uses OpenPGP encryption. This standard does not encrypt email message headers, so the message subject, sender, and recipients remain unencrypted. The developers are actively trying to improve these features and incorporate better security measures so that the security requirements are better aligned with the features that the users of Mailpile need.
 
-
+Another weakness that is outside of Mailpile's control is the data retainment policy of the email provider. Even though it deletes the email from the server, it could still be kept in remote data backups. There is no way to force the email provider to get rid of a backup. A hacker could theoretically find the data that way, but it is unlikely that would happen. 
 
 ### Security-Related Configuration Issues
 
-One of Mailpile's main features is that it is not an email service, but an email client. It doesn't run it's own email servers. Mailpile is used in conjuction with other email servers in order to provide a more secure way to get your email. When downloading Mailpile, you have to connect the client to your existing email accounts such as Gmail or Yahoo. Since users have to login to an external service using Mailpile, this connection and any credentials used to sign in would have to be encrypted to prevent unauthorized access. Mailpile provides built-in PGP encryption to handle this. According to the developers, at some point in the future, they want to offer an improved set of tools and integrations that make the email server component easier to integrate with. However, they have to make sure they do this correctly so they do not compromise security or ethics in the process. The developers also state that you may want to set up your own mail server using other open source projects such as Mail In A Box or iRedMail. 
+One of Mailpile's main features is that it is not an email service, but an email client. It doesn't run it's own email servers. Mailpile is used in conjuction with other email servers in order to provide a more secure way to get your email. When downloading Mailpile, you have to connect the client to your existing email accounts such as Gmail or Yahoo. Since users have to login to an external service using Mailpile, this connection and any credentials used to sign in would have to be encrypted to prevent unauthorized access. Mailpile provides built-in PGP encryption to handle this. According to the developers, at some point in the future, they want to offer an improved set of tools and integrations that make the email server component easier to integrate with. However, they have to make sure they do this correctly so they do not compromise security or ethics in the process. The developers also state that you may want to set up your own mail server using other open source projects such as Mail In A Box or iRedMail.
 
 Another security-related configuration issue is that Mailpile currently does not have any type of configuration file format. As of now, most of the initial configuration data is set so that is not required to be inputted. The developers want to have a safe way to import and export configuration data without leaking passwords or any other type of data. Mailpile is currently a very safe way to get your email and the developers are actively trying to implement more security features in order to make Mailpile safer to configure with external email services.
 
