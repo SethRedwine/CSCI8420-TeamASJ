@@ -26,11 +26,12 @@ The security requirements for use cases pertaining just to the local machine als
 
 Figure 3: Login Misuse Case
 
-Protecting the emails locally also requires that the files where the emails are saved are secure. Again this could be alleviated with encryption, with the contents only being decrypted when the client is opened and the user has logged in.
+Protecting the emails locally also requires that the files where the emails are saved are secure. Again this could be alleviated with encryption, with the contents only being decrypted when the client is opened and the user has logged in. Unfortunately, encryption isn't enough to completely secure data stored locally as a skilled attacker may be able to extract relevant encryption keys from a memory dump. To protect against a memory attack, the client could delete its encryption keys from memory each time the client is logged out.
 
-![Local Misuse Cases]()
+![Encryption Misuse Case](https://i.imgur.com/ybKcbDg.png)
 
-Figure 3: Local Misuse Cases
+Figure 4: Encryption Misuse Case
+
 
 
 ### Alignment of Security Requirements
