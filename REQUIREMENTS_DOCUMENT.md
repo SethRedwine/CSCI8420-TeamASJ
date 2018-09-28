@@ -16,7 +16,7 @@ There are several important data flows to and from the Mailpile email client, ou
 
 For our analysis of security requirements for Mailpile, it was useful to split our use cases into two separate views - those use cases that involved communications with systems external to the user's local machine and those that didn't. For the use cases that required communication with email servers over a network, both sending and receiving emails, the email client is vulnerable to the same types of attacks that any networked application is. The main concern we identified was eavesdropping on network traffic, because the client is directly accessing the emails on the server. In our journalist example, this type of malicious activity could allow a bad actor to identify a journalist's source and what they are communicating to the journalist; this bad actor could be an entity that a journalist is covering or a rival journalist trying to cover the same story. An easy way to prevent this type of attack would be to encrypt traffic between the client and the server. Another concern was that an attacker might gain access to the user's email directly on the email server and possibly manipulate them or delete them entirely, which would defeat the purpose of using Mailpile. To mitigate the ability of an attacker to access emails directly on the server, the client could delete the emails from the server once they have been downloaded to the user's local machine.
 
-![Network Eavesdropping Misuse Case](https://imgur.com/a/HBbYOT1)
+![Network Eavesdropping Misuse Case](https://i.imgur.com/wl0GNJb.png)
 
 *Figure 2: Network Eavesdropping Misuse Case*
 
