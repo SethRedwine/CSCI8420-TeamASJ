@@ -22,7 +22,7 @@ Figure 2: External Misuse Cases
 
 The security requirements for use cases pertaining just to the local machine also follow a familiar pattern. Here, a disgruntled article subject may wish to identify a source or get rid of information about them or an editor, being pressed to prove an article is true may wish to identify a source used by the journalist. These misuse cases would require the bad actors to gain access to either the mail client itself or to the contents it has stored on the local disk. Assuming that the bad actor has already gained access to the journalist’s device, for example if the journalist works from a shared machine, there are a few ways that Mailpile could mitigate against attacks. The first way to protect against misuse on the local machine would be to require a login to use the email client, though, if an editor wanted to gain access to the email it’s not hard to imagine that they could just wait until the journalist has left their device unattended with the client open. To further mitigate this possibility a timeout on the login could be used. If the misuser happened upon the client and it was already locked they may try to brute force the password, which could be remedied by a graduated password entry delay after so many failed attempts - similar to a phone's lockout.
 
-![Login Misuse Case](https://imgur.com/w2x0d0w)
+![Login Misuse Case](https://i.imgur.com/w2x0d0w.png)
 
 Figure 3: Login Misuse Case
 
