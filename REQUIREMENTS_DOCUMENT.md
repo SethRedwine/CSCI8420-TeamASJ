@@ -8,7 +8,7 @@ There are several important data flows to and from the Mailpile email client, ou
 
 ![Use Case Diagram](https://i.imgur.com/oe9yyB9.png)
 
-Figure 1: Use Case Diagram
+*Figure 1: Use Case Diagram*
 
 
 
@@ -16,23 +16,27 @@ Figure 1: Use Case Diagram
 
 For our analysis of security requirements for Mailpile, it was useful to split our use cases into two separate views - those use cases that involved communications with systems external to the user's local machine and those that didn't. For the use cases that required communication with email servers over a network, both sending and receiving emails, the email client is vulnerable to the same types of attacks that any networked application is. The main concern we identified was eavesdropping on network traffic, because the client is directly accessing the emails on the server. In our journalist example, this type of malicious activity could allow a bad actor to identify a journalist's source and what they are communicating to the journalist; this bad actor could be an entity that a journalist is covering or a rival journalist trying to cover the same story. An easy way to prevent this type of attack would be to encrypt traffic between the client and the server. Another concern was that an attacker might gain access to the user's email directly on the email server and possibly manipulate them or delete them entirely, which would defeat the purpose of using Mailpile. To mitigate the ability of an attacker to access emails directly on the server, the client could delete the emails from the server once they have been downloaded to the user's local machine.
 
-![External Misuse Cases]()
+![Network Eavesdropping Misuse Case]()
 
-Figure 2: External Misuse Cases
+*Figure 2: Network Eavesdropping Misuse Case*
 
-The security requirements for use cases pertaining just to the local machine also follow a familiar pattern. Here, a disgruntled article subject may wish to identify a source or get rid of information about them or an editor, being pressed to prove an article is true may wish to identify a source used by the journalist. These misuse cases would require the bad actors to gain access to either the mail client itself or to the contents it has stored on the local disk. Assuming that the bad actor has already gained access to the journalist’s device, for example if the journalist works from a shared machine, there are a few ways that Mailpile could mitigate against attacks. The first way to protect against misuse on the local machine would be to require a login to use the email client, though, if an editor wanted to gain access to the email it’s not hard to imagine that they could just wait until the journalist has left their device unattended with the client open. To further mitigate this possibility a timeout on the login could be used. If the misuser happened upon the client and it was already locked they may try to brute force the password, which could be remedied by a graduated password entry delay after so many failed attempts - similar to a phone's lockout.
+The security requirements for use cases pertaining just to the local machine also follow a familiar pattern. Here an editor, being pressed to prove an article is true may wish to identify a source used by the journalist or a disgruntled article subject may wish to identify a source or get rid of information about them. These misuse cases would require the bad actors to gain access to either the mail client itself or to the contents it has stored on the local disk. Assuming that the bad actor has already gained access to the journalist’s device, for example if the journalist works from a shared machine, there are a few ways that Mailpile could mitigate against attacks. The first way to protect against misuse on the local machine would be to require a login to use the email client, though, if an editor wanted to gain access to the email it’s not hard to imagine that they could just wait until the journalist has left their device unattended with the client open. To further mitigate this possibility a timeout on the login could be used. If the misuser happened upon the client and it was already locked they may try to brute force the password, which could be remedied by a graduated password entry delay after so many failed attempts - similar to a phone's lockout.
 
 ![Login Misuse Case](https://i.imgur.com/w2x0d0w.png)
 
-Figure 3: Login Misuse Case
+*Figure 3: Login Misuse Case*
 
 Protecting the emails locally also requires that the files where the emails are saved are secure. Again this could be alleviated with encryption, with the contents only being decrypted when the client is opened and the user has logged in. Unfortunately, encryption isn't enough to completely secure data stored locally as a skilled attacker may be able to extract relevant encryption keys from a memory dump. To protect against a memory attack, the client could delete its encryption keys from memory each time the client is logged out.
 
 ![Encryption Misuse Case](https://i.imgur.com/ybKcbDg.png)
 
-Figure 4: Encryption Misuse Case
+*Figure 4: Encryption Misuse Case*
 
+Of course, just keeping the files from being read by unauthorized parties doesn't guarantee they are safe. A bad actor may not even care to see what the files contain, they may just want to tamper with or destroy the emails. To protect these files, explicitely setting the file permissions and owner when writing to the disk could help prevent this sort of tampering. However, deleting the application itself may also render these files unreachable if they are encrypted. To help mitigate against this type of misuse, the ability to search a disk for pre-existing saved files and then decrypt and load them could be useful.
 
+![Tampered Files Misuse Case](https://i.imgur.com/u9xrM5n.png)
+
+*Figure 5: Tampered Files Misuse Case*
 
 ### Alignment of Security Requirements
 
