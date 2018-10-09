@@ -31,7 +31,7 @@ But the project has received contributions from more than 140 contributors to da
 
 ### Security Requirements
 ---
-As this is an email client, it will be used at home or at work on the users’ local machines. Users of Mailpile are very interested in security. First and foremost, users of the client want to keep their email communications private, not just from would-be attackers but also from email administrators. Users would also like to be able to store their email long-term and have easy, reliable access to them.
+As this is an email client, it will be used at home or at work on the users’ local machines. Users of Mailpile are very interested in security. First and foremost, users of the client want to keep their email communications private, not just from would-be attackers but also from email administrators. Users would also like to be able to store their email long-term and have easy, reliable access to them. We will be examining Mailpile from the perspective of journalists. For example, a journalist might want to use Mailpile because they might be dealing with sensitive information that they cannot risk getting hacked. Rival journalists might want to try and hack into another journalists emails and try to steal a controversial story from them.
 
 ### Security Features
 ---
