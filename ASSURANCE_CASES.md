@@ -4,7 +4,8 @@
 
 ### Assurance Claims
 
-#### 1. The client only allows authorized users access.
+#### 1. The client prevents all unauthorized access.
+![Assurance Case 1](https://i.imgur.com/GcHdUvF.png)
 
 #### 2. The client will save files securely.
 
