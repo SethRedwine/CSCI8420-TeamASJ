@@ -37,8 +37,9 @@
 
 #### 4. The client protects the identities of the sending and receiving parties.
 
-**Evidence:**
 ![Assurance Case 4](https://i.imgur.com/e3L0jW5.jpg)
+
+**Evidence:**
 *  Evidence 1: The communication text will be changed all the time. Therefore, the PGP encryption will also encrypt messages differently and changing all the time.
 *  Evidence 2:[PGP description part](https://info.townsendsecurity.com/bid/66064/aes-vs-pgp-what-is-the-difference)
 *  Evidence 3:[Is Mailpile webmail like Gmail, Yahoo, Hotmail?](https://www.mailpile.is/faq/#wha-3)
