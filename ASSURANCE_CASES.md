@@ -19,11 +19,11 @@
 
 #### 4. The client will protect the identities of the sending and receiving parties.
 
-![Assurance Case 4]()
-Evidence 1: The communication text will be changed all the time. Therefore, the PGP encryption will also encrypt messages differently and changing all the time.
-Evidence 2:[Link to PGP description part](https://info.townsendsecurity.com/bid/66064/aes-vs-pgp-what-is-the-difference)
-Evidence 3:[Link to Is Mailpile webmail like Gmail, Yahoo, Hotmail?](https://www.mailpile.is/faq/#wha-3)
-Evidence 4:[Link to Security quality](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
+![Assurance Case 4](https://i.imgur.com/e3L0jW5.jpg)
+*  Evidence 1: The communication text will be changed all the time. Therefore, the PGP encryption will also encrypt messages differently and changing all the time.
+*  Evidence 2:[Link to PGP description part](https://info.townsendsecurity.com/bid/66064/aes-vs-pgp-what-is-the-difference)
+*  Evidence 3:[Link to Is Mailpile webmail like Gmail, Yahoo, Hotmail?](https://www.mailpile.is/faq/#wha-3)
+*  Evidence 4:[Link to Security quality](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
 
 #### 5. The client will provide secure remote access to the contents.
 
