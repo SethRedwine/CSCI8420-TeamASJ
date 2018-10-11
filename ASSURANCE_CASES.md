@@ -48,7 +48,7 @@
 *  Evidence 4: [PGP Description](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
 
 
-#### 5. The client provides secure remote access to the contents.
+#### 5. The client prevents unauthorized access through it's remote login. 
 
 ![Assurance Case 5]()
 
