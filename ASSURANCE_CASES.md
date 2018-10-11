@@ -13,11 +13,11 @@
 * Evidence 3: This evidence does currently not exist. In order to collect this evidence, this feature would first have to                   exist. We could not find any evidence in the source code that this feature exists. Once implemented, then we                   would point this evidence to where the login attempt counter would be located.
 * Evidence 4: [Link to security.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/security.py)
 
-#### 2. The client will save files securely.
+#### 2. The client saves files securely.
 
-#### 3. The client's communication with external servers will be secure.
+#### 3. The client's communication with external servers is secure.
 
-#### 4. The client will protect the identities of the sending and receiving parties.
+#### 4. The client protects the identities of the sending and receiving parties.
 
 ![Assurance Case 4](https://i.imgur.com/e3L0jW5.jpg)
 *  Evidence 1: The communication text will be changed all the time. Therefore, the PGP encryption will also encrypt messages differently and changing all the time.
@@ -25,7 +25,7 @@
 *  Evidence 3:[Link to Is Mailpile webmail like Gmail, Yahoo, Hotmail?](https://www.mailpile.is/faq/#wha-3)
 *  Evidence 4:[Link to Security quality](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
 
-#### 5. The client will provide secure remote access to the contents.
+#### 5. The client provides secure remote access to the contents.
 
 ### Project Task Board
 
