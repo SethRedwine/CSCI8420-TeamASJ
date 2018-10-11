@@ -5,7 +5,13 @@
 ### Assurance Claims
 
 #### 1. The client prevents all unauthorized access.
-![Assurance Case 1](https://i.imgur.com/GcHdUvF.png)
+
+![Assurance Case 1](https://i.imgur.com/exehQUp.png)
+
+* Evidence 1: [Link to FAQ](https://www.mailpile.is/faq/#enc-5)
+* Evidence 2: [Link to auth.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/auth.py) 
+* Evidence 3: This evidence does currently not exist. A plan for the future would be to implement this feature and create a test case to properly test it.
+* Evidence 4: [Link to security.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/security.py)
 
 #### 2. The client will save files securely.
 
