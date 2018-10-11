@@ -39,10 +39,10 @@
 
 #### 4. The client protects the identities of the sending and receiving parties.
 
-![Assurance Case 4](https://i.imgur.com/e3L0jW5.jpg)
+![Assurance Case 4](https://i.imgur.com/BOLK0Rz.png)
 
 **Evidence:**
-*  Evidence 1: The communication text will be changed all the time. Therefore, the PGP encryption will also encrypt messages differently and changing all the time.
+*  Evidence 1: This evidence would be collected by gathering different encrypted text files based on different email messages. This would show that the messages are all different from each other. Also, if the PGP encryption algorithm gets updated, this evidence would include change logs for that as well.
 *  Evidence 2: [AES vs. PGP Article](https://info.townsendsecurity.com/bid/66064/aes-vs-pgp-what-is-the-difference)
 *  Evidence 3: [FAQ](https://www.mailpile.is/faq/#wha-3)
 *  Evidence 4: [PGP Description](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
