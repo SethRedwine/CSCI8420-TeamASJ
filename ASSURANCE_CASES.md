@@ -25,6 +25,13 @@
 
 #### 3. The client's communication with external servers is secure.
 
+![Assurance Case 3](https://i.imgur.com/6HGqliT.png)
+
+** Evidence: **
+* Evidence 1: [conn_brokers.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/conn_brokers.py)
+* Evidence 2: The evidence would have to be collected using something like WireShark to monitor network traffic while Mailpile is running.
+* Evidence 3: [security.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/security.py)
+
 #### 4. The client protects the identities of the sending and receiving parties.
 
 ![Assurance Case 4](https://i.imgur.com/e3L0jW5.jpg)
