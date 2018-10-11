@@ -8,12 +8,20 @@
 
 ![Assurance Case 1](https://i.imgur.com/exehQUp.png)
 
-* Evidence 1: [Link to FAQ](https://www.mailpile.is/faq/#enc-5)
-* Evidence 2: [Link to auth.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/auth.py) 
+** Evidence: **
+* Evidence 1: [FAQ](https://www.mailpile.is/faq/#enc-5)
+* Evidence 2: [auth.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/auth.py) 
 * Evidence 3: This evidence does currently not exist. In order to collect this evidence, this feature would first have to                   exist. We could not find any evidence in the source code that this feature exists. Once implemented, then we                   would point this evidence to where the login attempt counter would be located.
-* Evidence 4: [Link to security.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/security.py)
+* Evidence 4: [security.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/security.py)
 
-#### 2. The client saves files securely.
+#### 2. The client prevents unauthorized access to saved emails.
+
+![Assurance Case 2] (https://i.imgur.com/1ap5mQ5.png)
+
+** Evidence: **
+
+* Evidence 1: 
+
 
 #### 3. The client's communication with external servers is secure.
 
@@ -21,9 +29,9 @@
 
 ![Assurance Case 4](https://i.imgur.com/e3L0jW5.jpg)
 *  Evidence 1: The communication text will be changed all the time. Therefore, the PGP encryption will also encrypt messages differently and changing all the time.
-*  Evidence 2:[Link to PGP description part](https://info.townsendsecurity.com/bid/66064/aes-vs-pgp-what-is-the-difference)
-*  Evidence 3:[Link to Is Mailpile webmail like Gmail, Yahoo, Hotmail?](https://www.mailpile.is/faq/#wha-3)
-*  Evidence 4:[Link to Security quality](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
+*  Evidence 2:[PGP description part](https://info.townsendsecurity.com/bid/66064/aes-vs-pgp-what-is-the-difference)
+*  Evidence 3:[Is Mailpile webmail like Gmail, Yahoo, Hotmail?](https://www.mailpile.is/faq/#wha-3)
+*  Evidence 4:[Security quality](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
 
 #### 5. The client provides secure remote access to the contents.
 
