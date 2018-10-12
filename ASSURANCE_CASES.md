@@ -29,9 +29,9 @@
 * Evidence 4: Assurance Case 1
 
 
-#### Claim 3: The client's communication with external servers is secure.
+#### Claim 3: Mailpile prevents eavesdropping between the client and the email server.
 
-![Assurance Case 3](https://i.imgur.com/6HGqliT.png)
+![Assurance Case 3](https://i.imgur.com/Z7147H5.png)
 *Assurance Case 3*
 
 **Evidence:**
