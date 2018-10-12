@@ -6,7 +6,7 @@
 
 #### Claim 1: The client prevents all unauthorized access.
 
-![Assurance Case 1](https://i.imgur.com/exehQUp.png)
+![Assurance Case 1](https://i.imgur.com/WJJ2B5P.png)
 *Assurance Case 1*
 
 **Evidence:**
