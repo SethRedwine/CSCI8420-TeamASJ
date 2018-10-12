@@ -4,9 +4,10 @@
 
 ### Assurance Claims
 
-#### 1. The client prevents all unauthorized access.
+#### Claim 1: The client prevents all unauthorized access.
 
 ![Assurance Case 1](https://i.imgur.com/exehQUp.png)
+*Assurance Case 1*
 
 **Evidence:**
 * Evidence 1: [FAQ](https://www.mailpile.is/faq/#enc-5)
@@ -15,21 +16,23 @@
 * Evidence 4: [security.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/security.py)
 
 
-#### 2. The client prevents unauthorized access to saved emails.
+#### Claim 2: The client prevents unauthorized access to saved emails.
 
-![Assurance Case 2](https://i.imgur.com/R3pYW9t.png)
+![Assurance Case 2](https://i.imgur.com/2JnnbyI.png)
+*Assurance Case 2*
 
 **Evidence:**
 
 * Evidence 1: [WERVD Storage](https://github.com/mailpile/Mailpile/wiki/WERVD-Storage)
 * Evidence 2: C3 is an important subclaim to prove C1, but we could find no evidence that steps had been taken to support this claim. This leads us to believe that this is another potential flaw in the security of Mailpile. Easy ways to prove this claim might include attempting to hide the data store or simply changing the file permissions for the files.
 * Evidence 3: [mailpile-test.py](https://github.com/mailpile/Mailpile/blob/master/scripts/mailpile-test.py)
-* Evidence 4: [auth.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/auth.py)
+* Evidence 4: Assurance Case 1
 
 
-#### 3. The client's communication with external servers is secure.
+#### Claim 3: The client's communication with external servers is secure.
 
 ![Assurance Case 3](https://i.imgur.com/6HGqliT.png)
+*Assurance Case 3*
 
 **Evidence:**
 * Evidence 1: [conn_brokers.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/conn_brokers.py)
@@ -37,9 +40,10 @@
 * Evidence 3: [security.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/security.py)
 
 
-#### 4. The client protects the identities of the sending and receiving parties.
+#### Claim 4: The client protects the identities of the sending and receiving parties.
 
 ![Assurance Case 4](https://i.imgur.com/BOLK0Rz.png)
+*Assurance Case 4*
 
 **Evidence:**
 *  Evidence 1: This evidence would be collected by gathering different encrypted text files based on different email messages. This would show that the messages are all different from each other. Also, if the PGP encryption algorithm gets updated, this evidence would include change logs for that as well.
@@ -48,9 +52,10 @@
 *  Evidence 4: [PGP Description](https://en.wikipedia.org/wiki/Pretty_Good_Privacy)
 
 
-#### 5. The client prevents unauthorized access through it's remote login. 
+#### Claim 5: The client prevents unauthorized access through it's remote login. 
 
 ![Assurance Case 5]()
+*Assurance Case 5*
 
 **Evidence:**
 
