@@ -58,7 +58,9 @@
 *Assurance Case 5*
 
 **Evidence:**
-
+*  Evidence 1: [Avoiding Data Loss part II: Keys, Keys, Keys]https://www.mailpile.is/blog/2016-11-23_Protecting_Your_Local_Data.html)
+*  Evidence 2: [Comments to NIST concerning AES Modes of Operations:
+CTR-Mode Encryption](https://pdfs.semanticscholar.org/73da/c992eec0be2b773e0151a720692180e25709.pdf)
 
 
 ### Project Task Board
