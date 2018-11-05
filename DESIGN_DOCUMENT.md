@@ -3,7 +3,7 @@
 
 ### Threat Models
 
-## Threat Model Analysis
+### Threat Model Analysis
 
 ### Project Task Board
 
