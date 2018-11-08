@@ -4,7 +4,7 @@
 ### Threat Models
 
 ### Mailpile Security Analysis
-=======
+
 #### Internal Data Flows
 
 ![Internal Level 0 DFD](https://i.imgur.com/AV3WEji.png)
