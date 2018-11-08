@@ -1,9 +1,7 @@
 # Design Document
 ## TeamASJY
 
-### Threat Models
-
-### Mailpile Security Analysis
+### Mailpile Threat Model Security Analysis
 
 #### Internal Data Flows
 
