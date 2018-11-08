@@ -3,6 +3,28 @@
 
 ### Threat Models
 
+#### Internal Data Flows
+
+![Internal Level 0 DFD](https://i.imgur.com/AV3WEji.png)
+**Figure 1: Internal Level 0 DFD**
+
+![Internal Level 1 DFD](https://i.imgur.com/WPKahb7.png)
+**Figure 2: Internal Level 1 DFD**
+
+[Analysis Report for Internal DFDs](http://htmlpreview.github.io/?https://github.com/SethRedwine/CSCI8420-TeamASJY/blob/master/DATA_FLOW_DIAGRAMS/InternalDataFlowReport.htm)
+
+#### External Data Flows
+
+![External Level 0 DFD](https://i.imgur.com/XmuXBcg.png)
+**Figure 3: External Level 0 DFD**
+
+
+![External Level 1 DFD](https://i.imgur.com/eD7mkt4.png)
+**Figure 4: External Level 1 DFD**
+
+[Analysis Report for External DFDs](http://htmlpreview.github.io/?https://github.com/SethRedwine/CSCI8420-TeamASJY/blob/master/DATA_FLOW_DIAGRAMS/ExternalDataFlowReport.htm)
+
+
 ### Mailpile Security Analysis
 
 #### Elevation of Privilege
