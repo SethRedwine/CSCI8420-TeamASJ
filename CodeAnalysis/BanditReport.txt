@@ -1,0 +1,312 @@
+Test results:
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: ./commands.py:573
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+572	                    return rv
+573	                except:
+574	                    pass
+
+--------------------------------------------------
+>> Issue: [B404:blacklist] Consider possible security implications associated with subprocess module.
+   Severity: Low   Confidence: High
+   Location: ./crypto/tor.py:3
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b404-import-subprocess
+2	import socket
+3	import subprocess
+4	import threading
+
+--------------------------------------------------
+>> Issue: [B101:assert_used] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code.
+   Severity: Low   Confidence: High
+   Location: ./crypto/tor.py:30
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b101_assert_used.html
+29	# Version check for STEM >= 1.4
+30	assert(int(stem.__version__[0]) > 1 or
+31	       (int(stem.__version__[0]) == 1 and int(stem.__version__[2]) >= 4))
+32	
+33	
+34	class Tor(threading.Thread):
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: ./crypto/tor.py:142
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+141	            self.tor_process.wait()
+142	        except:
+143	            pass
+
+--------------------------------------------------
+>> Issue: [B603:subprocess_without_shell_equals_true] subprocess call - check for execution of untrusted input.
+   Severity: Low   Confidence: High
+   Location: ./crypto/tor.py:152
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b603_subprocess_without_shell_equals_true.html
+151	        try:
+152	            hasher = subprocess.Popen(
+153	                [self.tor_binary, '--hush', '--hash-password',
+154	                str(self.control_password)],
+155	                stdout=subprocess.PIPE, bufsize=1)
+156	            hasher.wait()
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: ./crypto/tor.py:214
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+213	                        t.tor_controller.remove_ephemeral_hidden_service(onion)
+214	                    except:
+215	                        pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: ./crypto/tor.py:221
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+220	                    self.tor_process.wait()
+221	            except:
+222	                pass
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./mail_source/__init__.py:275
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+274	        event_plan = dict((mp[0], mp) for mp in self.event.data['plan'])
+275	        if plan and random.randint(0, 10) == 1:
+276	            random_plan = [m._key for m in random.sample(plan, 1)]
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./mail_source/__init__.py:389
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+388	    def _jitter(self, seconds):
+389	        return seconds + random.randint(0, self.jitter)
+390	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./mail_source/__init__.py:808
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+807	            if config.prefs.deletion_ratio < 1.0:
+808	                random_ratio = random.random() * config.prefs.deletion_ratio
+809	                cutoff = int(max(
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./mail_source/__init__.py:812
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+811	                    # Jitter. Without this, the last message never gets deleted:
+812	                    random.randint(-10, 1)))
+813	            else:
+
+--------------------------------------------------
+>> Issue: [B504:ssl_with_no_version] ssl.wrap_socket call with no SSL/TLS protocol version specified, the default SSLv23 could be insecure, possible security issue.
+   Severity: Low   Confidence: Medium
+   Location: ./mail_source/imap_starttls.py:30
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b504_ssl_with_no_version.html
+29	            raise self.error('no STARTTLS')
+30	        self.sock = ssl.wrap_socket(self.sock, keyfile, certfile)
+31	        self.file = self.sock.makefile('rb')
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: ./mailboxes/__init__.py:45
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+44	            raise
+45	        except:
+46	            pass
+
+--------------------------------------------------
+>> Issue: [B110:try_except_pass] Try, Except, Pass detected.
+   Severity: Low   Confidence: High
+   Location: ./mailboxes/__init__.py:56
+   More Info: https://bandit.readthedocs.io/en/latest/plugins/b110_try_except_pass.html
+55	            raise
+56	        except:
+57	            pass
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./mailutils/generator.py:431
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+430	    # boundary doesn't appear in the text.
+431	    token = random.randrange(sys.maxint)
+432	    boundary = ('=' * 15) + (_fmt % token) + '=='
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   Location: ./plugins/keylookup/dnspka.py:91
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b310-urllib-urlopen
+90	            with ConnBroker.context(need=[ConnBroker.OUTGOING_HTTP]):
+91	                r = urllib2.urlopen(key["url"])
+92	            result = r.readlines()
+
+--------------------------------------------------
+>> Issue: [B303:blacklist] Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+   Severity: Medium   Confidence: High
+   Location: ./plugins/keylookup/wkd.py:69
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b303-md5
+68	        local_part_encoded = _zbase_encode(
+69	            hashlib.sha1(local.lower().encode('utf-8')).digest())
+70	
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   Location: ./plugins/keylookup/wkd.py:80
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b310-urllib-urlopen
+79	                with ConnBroker.context(need=[ConnBroker.OUTGOING_HTTPS]):
+80	                    r = urllib2.urlopen(url)
+81	                error = None
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   Location: ./plugins/motd.py:82
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b310-urllib-urlopen
+81	            self.session.ui.mark('Getting: %s' % url)
+82	            return urlopen(url, data=None, timeout=10).read()
+83	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./plugins/smtp_server.py:71
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+70	    def _challenge(self):
+71	        return '-'.join([str(random.randint(0, 0xfffffff)),
+72	                         str(random.randint(0, 0xfffffff)),
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./plugins/smtp_server.py:72
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+71	        return '-'.join([str(random.randint(0, 0xfffffff)),
+72	                         str(random.randint(0, 0xfffffff)),
+73	                         str(random.randint(0, 0xfffffff))])
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./plugins/smtp_server.py:73
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+72	                         str(random.randint(0, 0xfffffff)),
+73	                         str(random.randint(0, 0xfffffff))])
+74	
+
+--------------------------------------------------
+>> Issue: [B410:blacklist] Using etree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace etree with the equivalent defusedxml package.
+   Severity: Low   Confidence: High
+   Location: ./plugins/vcard_carddav.py:7
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_imports.html#b410-import-lxml
+6	import getopt
+7	from lxml import etree
+8	
+9	from mailpile.i18n import gettext as _
+
+--------------------------------------------------
+>> Issue: [B309:blacklist] Use of HTTPSConnection on older versions of Python prior to 2.7.9 and 3.4.3 do not provide security, see https://wiki.openstack.org/wiki/OSSN/OSSN-0033
+   Severity: Medium   Confidence: High
+   Location: ./plugins/vcard_carddav.py:45
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b309-httpsconnection
+44	        if self.protocol == "https":
+45	            req = httplib.HTTPSConnection(self.host, self.port)
+46	            # FIXME: Verify HTTPS certificate
+
+--------------------------------------------------
+>> Issue: [B320:blacklist] Using lxml.etree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace lxml.etree.fromstring with its defusedxml equivalent function.
+   Severity: Medium   Confidence: High
+   Location: ./plugins/vcard_carddav.py:107
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b313-b320-xml-bad-etree
+106	        stat, msg, hdr, resbody = self.request(self.url, "PROPFIND", {}, {})
+107	        tr = etree.fromstring(resbody)
+108	        urls = [x.text for x in tr.xpath("/d:multistatus/d:response/d:href",
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./plugins/vcard_gravatar.py:53
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+52	            # be checked at roughly the same time.
+53	            return time.time() + random.randrange(-14400, 3600)
+54	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./plugins/vcard_libravatar.py:52
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+51	            # same time.
+52	            return time.time() + random.randrange(-14400, 3600)
+53	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./postinglist.py:409
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+408	                    if (os.path.getsize(fn_path) > max_size and
+409	                            random.randint(0, 50) == 1):
+410	                        break
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./postinglist.py:602
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+601	                keyn = int(len(keys) * ratio)
+602	                start = random.randint(0, len(keys))
+603	                # This lets the selection wrap around to the beginning,
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./smtp_client.py:146
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+145	    # should get sent.
+146	    routes.sort(key=lambda k: random.randint(0, 10))
+147	
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./tests/__init__.py:56
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+55	    mailpile.util.TESTING = True
+56	    config.sys.http_port = random.randint(33500, 34000)
+57	#   config.sys.debug = 'log'
+
+--------------------------------------------------
+>> Issue: [B311:blacklist] Standard pseudo-random generators are not suitable for security/cryptographic purposes.
+   Severity: Low   Confidence: High
+   Location: ./www/jinjaextensions.py:720
+   More Info: https://bandit.readthedocs.io/en/latest/blacklists/blacklist_calls.html#b311-random
+719	    def _random(self, sequence):
+720	        return sequence[random.randint(0, len(sequence)-1)]
+721	
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 39720
+	Total lines skipped (#nosec): 0
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0.0
+		Low: 26.0
+		Medium: 6.0
+		High: 0.0
+	Total issues (by confidence):
+		Undefined: 0.0
+		Low: 0.0
+		Medium: 1.0
+		High: 31.0
