@@ -10,6 +10,7 @@ For the code review of Mailpile, we decided to use both an automated and manual 
 ### Automated Code Review Findings
 
 [Bandit Scan Report](https://github.com/SethRedwine/CSCI8420-TeamASJY/blob/master/CodeAnalysis/BanditReport.txt)
+
 [Pylint Scan Report](https://github.com/SethRedwine/CSCI8420-TeamASJY/blob/master/CodeAnalysis/PylintReport.txt)
 
 ### Summary of Key Findings
