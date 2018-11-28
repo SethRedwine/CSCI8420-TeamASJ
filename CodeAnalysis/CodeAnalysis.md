@@ -17,13 +17,19 @@ One of the most common low severity potential vulnerabilities found by Bandit is
 
 #### Pylint Findings
 
-Pylint did not detect very many actual security concerns within Mailpile since it is mainly focused on code quality checking. However, some security information can be extracted from the results. For example, Pylint detected that there were some sections of code that were marked as needing fixing, but were never fixed. For example, in auth.py, the developers flagged portions of code that need fixes such as implement password salting, needing CSRF protection, and possibly changing how an HTTP request is being sent. In the latest version of the source, these issues have not yet been addressed. Most of the issues they have marked for fixing are pretty significant from a security perspective and should be dealt with as soon as possible. Pylint also found a very large number of bad coding practices such as unused variables, unused functions, and a bad coding style in general. This can be concerning as it implies a lack of a solid engineering process which could lead to some unexpected behaviors that could negatively impact the application's security.
+Pylint did not detect very many actual security concerns within Mailpile since it is mainly focused on code quality checking. However, some security information can be extracted from the results. For example, Pylint detected that there were some sections of code that were marked as needing fixing, but were never fixed. For example, in auth.py, the developers flagged portions of code that need fixes such as implement password salting, needing CSRF protection, and possibly changing how an HTTP request is being sent. In the latest version of the source, these issues have not yet been addressed. Most of the issues they have marked for fixing are pretty significant from a security perspective and should be dealt with as soon as possible. Pylint also found a very large number of bad coding practices such as unused variables, unused functions, assertions in production code, and a bad coding style in general. This can be concerning as it implies a lack of a solid engineering process which could lead to some unexpected behaviors that could negatively impact the application's security.
+
+#### Report Links
 
 [Bandit Scan Report](https://github.com/SethRedwine/CSCI8420-TeamASJY/blob/master/CodeAnalysis/Reports/BanditReport.txt)
 
 [Pylint Scan Report](https://github.com/SethRedwine/CSCI8420-TeamASJY/blob/master/CodeAnalysis/Reports/PylintReport.txt)
 
 ### Summary of Key Findings
+
+The security vulnerabilities found in the manual and automated code reviews can be categorized into known security threats provided by the Common Weakness Enumeration (CWE). The following CWEs were determined based on the review findings.
+
+#### [CWE-396: Declaration of Catch for Generic Exception](https://cwe.mitre.org/data/definitions/396.html)
 
 ### Project Interaction Links 
 
