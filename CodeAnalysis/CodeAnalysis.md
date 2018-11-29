@@ -29,14 +29,17 @@ Based on the analysis of the data flow diagram we developed, we identified the f
 
 #### Manual Code Review Checklist:
 
-- [ ] CWE-20: Improper Input Validation
-- [ ] CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+- [X] CWE-20: Improper Input Validation
+- [X] CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
 - [X] CWE-250: Execution with Unnecessary Privileges
 - [X] CWE-284: Improper Access Control
 
 ### Summary of Key Findings
 
 The security vulnerabilities found in the manual and automated code reviews can be categorized into known security threats provided by the Common Weakness Enumeration (CWE). The following CWEs were determined based on the review findings.
+
+#### [CWE-20: Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
+The manual code review showed that Mailpile uses [validators.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/config/validators.py) to validate most input with regards to email addresses, URL's, directories, and more. These are read in from a config file. The input being read in from the config files is not being checked or validated. This could allow attackers the ability to craft an unexpected input which could result in malicious use of the program.
 
 #### [CWE-250: Execution with Unnecessary Privileges](https://cwe.mitre.org/data/definitions/250.html)
 
@@ -63,9 +66,6 @@ This CWE reflects the use of the "Try, Except, Pass" blocks within some of the s
 #### [CWE-601: URL Redirection to Untrusted Site ('Open Redirect')](https://cwe.mitre.org/data/definitions/601.html)
 
 The automated code scan also detected some audit URLs being open for permitted schemes. If this is exploited by an attacker, malicious data could be uploaded into the application. Since an HTTP parameter may contain a URL value, this could cause the web application to redirect the request to the specified URL. By modifying the URL value to a malicious site, an attacker may successfully launch a phishing scam and steal user credentials. Because the server name in the modified link is identical to the original site, phishing attempts have a more trustworthy appearance. In this case, a specified URL format should be utilized.
-
-#### [CWE-20: Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
-Mailpile uses [validators.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/config/validators.py) to validate most input with regards to email addresses, URL's, directories, and more. These are read in from a config file. 
 
 ### Project Interaction Links
 
