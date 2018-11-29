@@ -25,18 +25,18 @@ Pylint did not detect very many actual security concerns within Mailpile since i
 
 ### Manual Code Review
 
-Based on the analysis of the data flow diagram we developed, we identified the four most relevant CWEs to look for as we reviewed the codebase.
+Based on the analysis of the data flow diagram we developed, we identified the four most relevant common weaknesses to look for as we reviewed the codebase. After reviewing the code base, we found three of these represented represented which are discussed further in the Summary of Key Findings section.
 
 #### Manual Code Review Checklist:
 
 - [X] CWE-20: Improper Input Validation
-- [X] CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+- [] CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
 - [X] CWE-250: Execution with Unnecessary Privileges
 - [X] CWE-284: Improper Access Control
 
 ### Summary of Key Findings
 
-The security vulnerabilities found in the manual and automated code reviews can be categorized into known security threats provided by the Common Weakness Enumeration (CWE). The following CWEs were determined based on the review findings.
+The security vulnerabilities found in the manual and automated code reviews can be categorized into known security threats provided by the Common Weakness Enumeration (CWE). The following CWEs were determined to be present and relevant based on the review findings.
 
 #### [CWE-20: Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
 The manual code review showed that Mailpile uses [validators.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/config/validators.py) to validate most input with regards to email addresses, URL's, directories, and more. These are read in from a config file. The input being read in from the config files is not being checked or validated. This could allow attackers the ability to craft an unexpected input which could result in malicious use of the program.
@@ -49,7 +49,7 @@ This weakness was also discovered in the manual code review process. In the sour
 
 #### [CWE-284: Improper Access Control](https://cwe.mitre.org/data/definitions/284.html)
 
-When reviewing the code manually, we found a potential issue with the timeout for the user's session. The user session that Mailpile creates in auth.py remains open for a week by default and isn't configurable, allowing the program to be left open to unauthorized users for quite a long period. This weakens the argument we made in our first assurance claim.
+When reviewing the code manually, we found a potential issue with the timeout for the user's session. The user session that Mailpile creates in [auth.py](https://github.com/mailpile/Mailpile/blob/master/mailpile/auth.py) remains open for a week by default and isn't configurable, allowing the program to be left open to unauthorized users for quite a long period. This weakens the argument we made in our first assurance claim. It was also apparent in the same file that the developers had coded in a default user for development purposes (the application is still in beta) that would allow access to the application without actually performing any authentication, which poses a large risk for people that would choose to use the application before that is taken out.
 
 #### [CWE-327: Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
 
