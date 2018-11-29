@@ -56,6 +56,11 @@ As noted in the automated code review section, there are many instances of stand
 
 This CWE reflects the use of the "Try, Except, Pass" blocks within some of the source modules as shown in the automated code review. The practice of catching all exceptions can lead to very complex error handling code which will likely include security vulnerabilities. Another consequence of this is that as the application grows, new exception types may be introduced. Since these blocks are catching all exceptions and not doing any error handling, a new exception type that needs to be handled a certain way will be not be processed correctly. There might also be some exceptions that shouldn't be caught at all, which will be caught in the current implementation. 
 
+
+#### [CWE-601: URL Redirection to Untrusted Site ('Open Redirect')](https://cwe.mitre.org/data/definitions/601.html)
+
+Based on the report of Bandit, it discovers the issue which is Audit url open for permitted schemes. If it happens, it will allow use of file url or custom schemes is often unexpected. Since an http parameter may contain a URL value, this could cause the web application to redirect the request to the specified URL. By modifying the URL value to a malicious site, an attacker may successfully launch a phishing scam and steal user credentials. Because the server name in the modified link is identical to the original site, phishing attempts have a more trustworthy appearance. In this case, a specified URL format should be utilized. 
+
 ### Project Interaction Links 
 
 ### Project Task Board
