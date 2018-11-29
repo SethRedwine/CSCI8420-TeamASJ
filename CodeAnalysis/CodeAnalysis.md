@@ -30,7 +30,7 @@ Based on the analysis of the data flow diagram we developed, we identified the f
 #### Manual Code Review Checklist:
 
 - [X] CWE-20: Improper Input Validation
-- [] CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+- [ ] CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
 - [X] CWE-250: Execution with Unnecessary Privileges
 - [X] CWE-284: Improper Access Control
 
