@@ -63,5 +63,9 @@ Based on the report of Bandit, it discovers the issue which is Audit url open fo
 
 ### Project Interaction Links 
 
+We opened issue #2181 on Mailpile's GitHub repository. This issue advises them that the use of SHA-1 for hashing is not recommended since it is an outdated algorithm. The issue can be found at the following link.
+
+[GitHub Issue](https://github.com/mailpile/Mailpile/issues/2181)
+
 ### Project Task Board
 [Github Project Page](https://github.com/SethRedwine/CSCI8420-TeamASJY/projects/6)
