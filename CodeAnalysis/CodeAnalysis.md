@@ -29,9 +29,9 @@ Based on the analysis of the data flow diagram we developed, we identified the f
 
 #### Manual Code Review Checklist:
 
-- [ ] CWE-250: Execution with Unnecessary Privileges
 - [ ] CWE-20: Improper Input Validation
 - [ ] CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
+- [X] CWE-250: Execution with Unnecessary Privileges
 - [X] CWE-284: Improper Access Control
 
 ### Summary of Key Findings
@@ -41,6 +41,8 @@ The security vulnerabilities found in the manual and automated code reviews can 
 #### [CWE-250: Execution with Unnecessary Privileges](https://cwe.mitre.org/data/definitions/250.html)
 
 The automated code review showed that there are a few scenarios in which subprocesses are being generated and used without any input validation. This could potentially cause operations that have a higher privilege level than necessary to be executed. If this is allowed to happen, new weaknesses can be created or existing weaknesses can be amplified. This threat was also identified within the threat model where data being sent between the keystores and the main application might not be getting validated.
+
+This weakness was also discovered in the manual code review process. In the source module that handles communications with the Tor web browser, a subprocess is created and used for password hashing. However, there is no input validation or other security checks performed on this subprocess after the data has been transferred. 
 
 #### [CWE-284: Improper Access Control](https://cwe.mitre.org/data/definitions/284.html)
 
