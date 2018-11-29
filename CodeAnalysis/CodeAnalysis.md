@@ -32,7 +32,7 @@ Based on the analysis of the data flow diagram we developed, we identified the f
 - [ ] CWE-250: Execution with Unnecessary Privileges
 - [ ] CWE-20: Improper Input Validation
 - [ ] CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
-- [ ] CWE-284: Improper Access Control
+- [X] CWE-284: Improper Access Control
 
 ### Summary of Key Findings
 
@@ -41,6 +41,10 @@ The security vulnerabilities found in the manual and automated code reviews can 
 #### [CWE-250: Execution with Unnecessary Privileges](https://cwe.mitre.org/data/definitions/250.html)
 
 The automated code review showed that there are a few scenarios in which subprocesses are being generated and used without any input validation. This could potentially cause operations that have a higher privilege level than necessary to be executed. If this is allowed to happen, new weaknesses can be created or existing weaknesses can be amplified. This threat was also identified within the threat model where data being sent between the keystores and the main application might not be getting validated.
+
+#### [CWE-284: Improper Access Control](https://cwe.mitre.org/data/definitions/284.html)
+
+When reviewing the code manually, we found a potential issue with the timeout for the user's session. The user session that Mailpile creates remains open for a week by default and isn't configurable, allowing the program to be left open to unauthorized users for quite a long period. This weakens the argument we made in our first assurance claim.
 
 #### [CWE-327: Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
 
