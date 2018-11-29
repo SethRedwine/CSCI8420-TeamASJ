@@ -46,7 +46,7 @@ This weakness was also discovered in the manual code review process. In the sour
 
 #### [CWE-284: Improper Access Control](https://cwe.mitre.org/data/definitions/284.html)
 
-When reviewing the code manually, we found a potential issue with the timeout for the user's session. The user session that Mailpile creates remains open for a week by default and isn't configurable, allowing the program to be left open to unauthorized users for quite a long period. This weakens the argument we made in our first assurance claim.
+When reviewing the code manually, we found a potential issue with the timeout for the user's session. The user session that Mailpile creates in auth.py remains open for a week by default and isn't configurable, allowing the program to be left open to unauthorized users for quite a long period. This weakens the argument we made in our first assurance claim.
 
 #### [CWE-327: Use of a Broken or Risky Cryptographic Algorithm](https://cwe.mitre.org/data/definitions/327.html)
 
