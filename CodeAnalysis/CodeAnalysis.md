@@ -25,7 +25,7 @@ Pylint did not detect very many actual security concerns within Mailpile since i
 
 ### Manual Code Review
 
-Based on the analysis of the data flow diagram we developed, we identified the four most relevant common weaknesses to look for as we reviewed the codebase. After reviewing the codebase, we found three of these represented which are discussed further in the Summary of Key Findings section. 
+Based on the analysis of the data flow diagram we developed, we identified the four most relevant common weaknesses to look for as we reviewed the codebase. After reviewing the codebase, we found three of these represented which are discussed further in the Summary of Key Findings section. The issues found in the manual review are denoted with checkmarks next to them.
 
 #### Manual Code Review Checklist:
 
