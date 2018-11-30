@@ -25,7 +25,7 @@ Pylint did not detect very many actual security concerns within Mailpile since i
 
 ### Manual Code Review
 
-Based on the analysis of the data flow diagram we developed, we identified the four most relevant common weaknesses to look for as we reviewed the codebase. After reviewing the code base, we found three of these represented represented which are discussed further in the Summary of Key Findings section.
+Based on the analysis of the data flow diagram we developed, we identified the four most relevant common weaknesses to look for as we reviewed the codebase. After reviewing the codebase, we found three of these represented which are discussed further in the Summary of Key Findings section. 
 
 #### Manual Code Review Checklist:
 
@@ -33,6 +33,8 @@ Based on the analysis of the data flow diagram we developed, we identified the f
 - [ ] CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')
 - [X] CWE-250: Execution with Unnecessary Privileges
 - [X] CWE-284: Improper Access Control
+
+Our manual review did not find any CWE-89s (SQL Injection) as specified in our threat model. The security functions within Mailpile seem to be handling any methods of database access securely. There are no hard-coded SQL queries and any input that may require database access is being validated. Also, Mailpile uses secure methods and functions that have checking for SQL injection vulnerabilities built in.
 
 ### Summary of Key Findings
 
@@ -69,7 +71,7 @@ The automated code scan also detected some audit URLs being open for permitted s
 
 ### Project Interaction Links
 
-We opened issue #2181 on Mailpile's GitHub repository. This issue advises them that the use of SHA-1 for hashing is not recommended since it is an outdated algorithm. The issue can be found at the following link.
+We opened issue #2181 on Mailpile's GitHub repository. This issue advises them that the use of SHA-1 for hashing is not recommended since it is an outdated algorithm. After submitting the issue, it was promptly closed by one of the main developers. He noted that Mailpile has to use this algorithm so that it matches up with the WKD specification. This still seems like a security concern that should be addressed in the future as these web keys play an important role in the security functionality. The issue can be found at the following link.
 
 [GitHub Issue](https://github.com/mailpile/Mailpile/issues/2181)
 
